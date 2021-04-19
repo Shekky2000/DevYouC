@@ -4,31 +4,36 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Wk_1___Homework__MadLibs
+namespace VacationBudgetPlanner
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string adjective1 = "shiny";
-            string noun1 = "tiger";
-            string verbPastTense1 = "stormed";
-            string adverb1 = "freely";
-            string adjective2 = "dark";
-            string noun2 = "horse";
-            string noun3 = "lion";
-            string adjective3 = "sharp";
-            string verb1 = "pounced";
-            string adverb2 = "gladly";
-            string verbPastTense2 = "laughed";
-            string adjective4 = "fancy";
 
-            Console.WriteLine($"Today I went to the zoo. I saw a {adjective1} {noun1} jumping up and down in its tree. He {verbPastTense1} {adverb1} through the large tunnel that led to its {adjective2} {noun2}. I got some peanuts and passed them through the cage to a gigantic gray {noun3} towering above my head. Feeding that animal made me hungry. I went to get a {adjective3} scoop of ice cream. It filled my stomach. Afterwards, I had to {verb1} {adverb2} to catch our bus. When I got home, I {verbPastTense2} my mom for a {adjective4} day at the zoo.");
+            string name = "Tim";
+            string greeting = "Greetings guest! Please enter your name here to continue on your lovely journey.";
+            string gratitude = "Thank you";
+            string country1 = "New Zealand";
+            string country2 = "Australia";
+            string welcome = "Welcome to your Vacation Budget Planner. Here, we have the ability to help you plan for your vacation in one of the two countries that are on special.";
+
+            Console.WriteLine($"{greeting}");
+            Console.WriteLine($"Name: {name}");
+            Console.WriteLine($"{gratitude} {name}!");
+            Console.WriteLine($"        ");
 
 
-
+            Console.WriteLine($"{welcome}");
+            Console.WriteLine($"Please choose from either of these countries: ");
+            Console.WriteLine($"{country1} or {country2}");
+            Console.WriteLine($"Country: {country1}");
+            Console.WriteLine($"Great selection!");
+            Console.WriteLine($"{gratitude} {name}!");
 
             Console.ReadLine();
+
+
         }
     }
 }

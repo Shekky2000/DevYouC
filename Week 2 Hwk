@@ -1,0 +1,87 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Wk2Hwk
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //Fahrenheit to Celsius - Excercise 1
+            Console.WriteLine("Fahrenheit Converter to Celsius");
+            Console.WriteLine(" ");
+            Console.WriteLine("Please enter the Fahrenheit temperature you would like converted to Celcius.");
+            Double Fehrenheit = Convert.ToDouble(Console.ReadLine());
+
+            Double Celsius = (Fehrenheit - 32) / 1.8;
+            String answer = String.Format("{0:0.00}", Celsius);
+            Console.WriteLine($"{Fehrenheit} degrees Fehrenheit is equal to {answer} degrees Celsius");
+
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+
+
+            // Sales Tax Calculator - Excercise 2
+            Console.WriteLine("Sales Tax Calculator");
+            Console.WriteLine(" ");
+            Console.WriteLine("To calculate the sales tax on your product, please enter the pre-tax price of the item you would like to purchase.");
+            Double cost = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Please enter your tax rate as a percent.");
+            Double taxRate = Convert.ToDouble(Console.ReadLine());
+            Double taxRateConvert = (taxRate * .01);
+            Double tax = (cost * taxRateConvert);
+            String taxAnswer = String.Format("{0:0.00}", tax);
+            Console.WriteLine($"The amount of taxes on your item is ${taxAnswer}");
+
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+
+            // Tip Calculator - Excercise 3
+            Console.WriteLine("Tip Calculator");
+            Console.WriteLine(" ");
+            Console.WriteLine("To calculate the amount of the tip, please begin with entering the total bill.");
+            Double totalBill = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Please enter what percent you would like to tip.");
+            Double tipRate = Convert.ToDouble(Console.ReadLine());
+            Double tipRateConvert = (tipRate * .01);
+            Double tip = (totalBill * tipRateConvert);
+            String tipAnswer = String.Format("{0:0.00}", tip);
+            Console.WriteLine($"The amount of tip on your item is ${tipAnswer}");
+
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+
+
+            // Bill Dividends - Exercise 4
+            Console.WriteLine("Bill Divider");
+            Console.WriteLine(" ");
+            Console.WriteLine("To figure out how to divide the bill up equally among the parties, please first enter the amount of the bill.");
+            Double bill = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(" ");
+            Console.WriteLine("Enter any other values(like tips) you would like split.");
+            Double billOther = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(" ");
+            Console.WriteLine("Please enter how many people are splitting this amount.");
+            Double partySize = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine(" ");
+            
+            double totalDivide = (bill + billOther) / (partySize);
+            String totalDivFormatted = String.Format("{0:0.00}", totalDivide);
+            Console.WriteLine($"Each party is responsible for ${totalDivFormatted}.");
+
+
+            Console.WriteLine(" ");
+            Console.WriteLine(" ");
+
+    
+
+            Console.WriteLine("Press ENTER to exit.");
+            Console.ReadLine();
+
+        }
+    }
+}

@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace VacationBudgetPlannerWk2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            string greeting = "Greetings guest! Please enter your name here to continue on your lovely journey.";
+            string gratitude = "Thank you";
+            string country1 = "Jamaica";
+            string country2 = "Australia";
+            string welcome = "Welcome to your Vacation Budget Planner. Here, we have the ability to help you plan for your vacation in one of the two countries that are on special.";
+
+            Console.WriteLine($"{greeting}");
+            string name = Console.ReadLine();
+
+            Console.WriteLine($"{gratitude} {name}!");
+            Console.WriteLine($"        ");
+
+
+            Console.WriteLine($"{welcome}");
+            Console.WriteLine($"Please choose from either of these countries: ");
+            Console.WriteLine($"{country1} or {country2}");
+            string nameCountry = Console.ReadLine();
+            Console.WriteLine($" ");
+
+            Console.WriteLine($"{nameCountry} is a great selection!");
+            Console.WriteLine($"{gratitude} {name}!");
+            Console.WriteLine($" ");
+
+            Console.WriteLine($"How many days will you be staying in {nameCountry}?");
+            Double days = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine($" ");
+
+            Console.WriteLine($"How much spending money will you bring to {nameCountry}?");
+            Double spendingMoney = Convert.ToDouble(Console.ReadLine());
+            String spendingMoneyForm = String.Format("{0:0.00}", spendingMoney);
+            Double perDiem = spendingMoney / days;
+            String perDiemForm = String.Format("{0:0.00}", perDiem);
+            Console.WriteLine($" ");
+            Console.WriteLine($" ");
+
+            Console.WriteLine($"{name}, if you bring ${spendingMoneyForm} with you on a trip to {nameCountry} for {days} days, then you will have ${perDiemForm} to spend each day.");
+
+            Console.WriteLine($" ");
+            Console.WriteLine($" ");
+            Console.WriteLine("Thank you for using Vacation Budget Planner.");
+            Console.WriteLine($" ");
+            Console.WriteLine("Press ENTER to exit.");
+            Console.ReadLine();
+
+
+        }
+    }
+}

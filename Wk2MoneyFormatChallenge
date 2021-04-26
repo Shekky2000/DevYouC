@@ -1,0 +1,1 @@
+String moneyForm = String.Format("{0:c}", variable);

@@ -1,0 +1,17 @@
+ // Tip Calculator - Excercise 3 - with money format
+            Console.WriteLine("Tip Calculator");
+            Console.WriteLine(" ");
+            Console.WriteLine("To calculate the amount of the tip, please begin with entering the total bill.");
+            Double totalBill = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Please enter what percent you would like to tip.");
+            Double tipRate = Convert.ToDouble(Console.ReadLine());
+            Double tipRateConvert = (tipRate * .01);
+            Double tip = (totalBill * tipRateConvert);
+            String tipAnswer = String.Format("{0:c}", tip);
+            Console.WriteLine($"The amount of tip on your item is {tipAnswer}");
+
+            Console.WriteLine(" ");
+
+
+            Console.WriteLine("Press ENTER to exit.");
+            Console.ReadLine();

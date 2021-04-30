@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Wk3Homework
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+
+            //Wk3 Homework. Exercise: Mini Trivia.
+
+            Console.WriteLine("Choose a category of movie trivia: Lord of the Rings, Harry Potter, or Star Wars. ");
+
+            string movie = Console.ReadLine();
+            switch (Console.ReadLine().ToLower())
+
+            {
+                case "lord of the rings":
+                    Console.WriteLine("In Lord of the Rings, how many Hobbits went on the adventure to return the ring to Mordor? ");
+                    int lotrAnswer = Convert.ToInt16(Console.ReadLine());
+                    if (lotrAnswer == 4 )
+                    { Console.WriteLine("You are Correct!!"); }
+                    else
+                    { Console.WriteLine(" That is incorrect. There were 4 Hobbits: Samwise Gamgee, Merry Brandybuck, Pippin Took; and of course, Frodo Baggins! "); }
+
+                    break;
+                case "harry potter":
+                    Console.WriteLine("What number movie was Order of the Pheonix?");
+                    int hpAnswer = Convert.ToInt16(Console.ReadLine());
+                    if (hpAnswer == 5)
+                    {
+                        Console.WriteLine("You are Correct!!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("That is incorrect. Order of the Pheonix was the fifth movie and book!");
+                    }
+
+                    break;
+                case "star wars":
+                    Console.WriteLine("What year was Return of the Jedi released in theaters?");
+                    int starAnswer = Convert.ToInt16(Console.ReadLine());
+                    if (starAnswer == 1983)
+                    {
+                        Console.WriteLine("You are correct!!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("That is incorrect. Return of the Jedi was released in 1983.");
+                    }
+                    break;
+                
+
+
+            }
+
+            Console.WriteLine(" ");
+            Console.WriteLine("Thank you for playing.");
+
+            Console.WriteLine(" ");
+            Console.WriteLine("Press ENTER to exit");        
+            Console.ReadLine();
+
+
+
+
+
+
+
+            }
+    }
+}

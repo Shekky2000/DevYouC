@@ -1,0 +1,215 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Wk4_HWK
+{
+    class Program
+    {
+        static void Angela(string[] args)
+        {
+
+            //counter = counter + 1 (alternative way of adding 1 to the counter)
+            // counter += 1  (3rd way. can add increments more thn just 1.)
+            // (still can't get this to work)
+            // System.Threading;
+            //(millisecondsTimeout: 3000);
+
+            // }
+
+            Console.Write("Please enter a number: ");
+
+            int userNumber = Int32.Parse(Console.ReadLine());
+            int n = userNumber + 1;
+
+            while (n >= 1 )
+
+            {
+                Console.WriteLine($"The current value is: {n}");
+                n++;
+
+                if (n == 101)
+                {
+                    Console.WriteLine($"Would you like to continue? Enter y/n.");
+                    String input = Console.ReadLine().ToLower();
+
+                    if (input == "y")
+                    {
+
+                        n = 0;
+                    }
+
+                    if (input == "n")
+                        Console.WriteLine($"Thank you for using counter");
+
+
+                }
+
+            }
+
+
+
+            //string secret = "notpassword";
+            //while (secret == "password")
+            //{
+            //    Console.WriteLine("Access Granted!");
+
+
+            //}
+
+
+
+
+
+
+
+            //{ 
+            //    bool keepGoing = true; //line 3 - Makes all true until you get to the if statement.
+
+            //    while (keepGoing == true)
+            //    {
+            //        Console.Write("Please enter a number: ");
+            //        int firstNumber = Int32.Parse(Console.ReadLine());
+
+            //        Console.Write("Please enter a number: ");
+            //        int secondNumber = Int32.Parse(Console.ReadLine());
+
+            //        int sum = firstNumber + secondNumber;
+
+            //        Console.WriteLine($"The sum is: {sum}");
+
+            //        Console.WriteLine("Would you like to find the sum of two different numbers? Enter (y)es or (n)o");
+            //        string userInput = Console.ReadLine().ToLower();
+
+            //        if (userInput == "n" || userInput == "no") //line 20
+            //         {
+            //            keepGoing = false;
+            //        }
+
+
+
+            //}
+
+            Console.WriteLine("Press ENTER to exit");
+            Console.ReadLine();
+
+
+        }
+
+        static void ClassExercises(string[] args)
+        {
+            string secret = "not password";
+
+            while(secret == "password")
+            {
+                Console.WriteLine("Access Granted!");
+            }
+
+            int counter = 0;
+
+            while(counter < 10)
+            {
+                Console.WriteLine($"The current value is: {counter}");
+                counter += 1;
+            }
+
+            counter = 0;
+            string keepGoing = "y";
+
+            while(keepGoing == "y")
+            {
+                Console.WriteLine($"The current value is: {counter}");
+                counter += 1;
+                Console.WriteLine("Would you like to continue (y/n)?");
+                keepGoing = Console.ReadLine();
+                
+            }
+        }
+
+        static int AddOne(int n)
+        {
+            n = n * 2;
+            n = n + 3;
+            n = n - 9;
+
+            return n;
+        }
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Please enter a number");
+            int n = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("");
+
+            Console.WriteLine($"Print all whole numbers from 1 to {n}");
+            int currentValue = 1;
+            while(currentValue <= n)
+            {
+                Console.WriteLine(currentValue);
+                currentValue += 1;
+            }
+            Console.WriteLine("");
+
+            Console.WriteLine($"Print all whole numbers in reverse from {n} to 1");
+            currentValue = n;
+            while(currentValue > 0)
+            {
+                Console.WriteLine(currentValue);
+                currentValue -= 1;
+            }
+            Console.WriteLine("");
+
+            Console.WriteLine($"Print all the letters in the alphabet from a - z");
+            char currentCharacter = 'a';
+            while(currentCharacter <= 'z')
+            {
+                Console.WriteLine(currentCharacter);
+                currentCharacter++; // increase the character value by one
+            }
+            Console.WriteLine("");
+
+            Console.WriteLine($"Print all even numbers between 1 and 100");
+            currentValue = 2;
+            while(currentValue <= 100)
+            {
+                Console.WriteLine(currentValue);
+                currentValue += 2;
+            }
+            Console.WriteLine("");
+
+            Console.WriteLine($"Print all odd numbers between 1 and 100");
+            currentValue = 1;
+            while(currentValue <= 100)
+            {
+                Console.WriteLine(currentValue);
+                currentValue += 2;
+            }
+            Console.WriteLine("");
+
+            Console.WriteLine($"Print the sum of all the whole numbers from 1 to {n}");
+            int sum = 0;
+            currentValue = 1;
+            while(currentValue <= n)
+            {
+                sum += currentValue;
+                currentValue += 1;
+            }
+            Console.WriteLine($"Sum: {sum}");
+            Console.WriteLine("");
+
+            Console.WriteLine($"Print the multiplication table up to {n}");
+            currentValue = 1;
+            while(currentValue <= n)
+            {
+                Console.WriteLine($"{n} * {currentValue} = {n * currentValue}");
+                currentValue += 1;
+            }
+            Console.WriteLine("");
+
+            Console.WriteLine("Press any key to exit");
+            Console.ReadLine();
+        }
+    }
+}

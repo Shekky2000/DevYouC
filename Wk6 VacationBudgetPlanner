@@ -1,0 +1,130 @@
+ using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Wk6_VacationBudgetPlanner
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Welcome to Vacation Budget Planner!");
+            Console.WriteLine("What is your name?");
+            string name = Console.ReadLine();
+
+
+            string pinNumber = "1234";
+            bool isValidPin = false;
+
+            Console.WriteLine($"Hello {name}. Please enter your pin. You will only have 3 tries to guess the correct pin number.");
+
+            for (int i = 0; i < 3; i++)
+            
+            {
+                Console.Write("What is your pin: ");
+                string userPin = Console.ReadLine();
+
+                if (userPin == pinNumber)
+                {
+                    isValidPin = true;
+                    break;
+                }
+
+            }
+
+
+            if (isValidPin)
+            {
+                Console.WriteLine("You have access to the application");
+            }
+            else
+            {
+                Console.WriteLine("You have exceeded the allowed number of attempts. You may continue as a guest.");
+            }
+
+            Console.WriteLine(" ");
+
+      
+            bool keepGoing = true;
+
+            while (keepGoing)
+            {
+                Console.WriteLine($"Hello {name}. Where would you like to travel to Mexico or Jamaica?");
+                string country = Console.ReadLine();
+                switch (country.ToLower())
+                {
+                    case "mexico":
+                        Console.WriteLine($" ");
+                        Console.WriteLine("How many days will you like to spend on your trip?");
+                        int mDays = int.Parse(Console.ReadLine());
+                        Console.WriteLine("How much spending money would you like to bring?");
+                        Console.Write("$ ");
+                        double mexMoney = double.Parse(Console.ReadLine());
+                        double mexPerDay = mexMoney / mDays;
+                        Console.WriteLine($"{name}, if you are going to {country} for {mDays} days with {mexMoney:c} for spending money. You can budget {mexPerDay:c} per day.");
+                        double pesoExchange = 19.77;
+                        double peso = mexPerDay * pesoExchange;
+                        Console.WriteLine($"The recent exchange rate for the Peso is {pesoExchange} Pesos per 1 USD. This does not include fees for exchange.");
+                        Console.WriteLine($" ");
+                        Console.WriteLine($" If you have ${mexPerDay}, then you will have {peso} Pesos per day. ");
+                        Console.WriteLine($" ");
+                        break;
+                    case "jamaica":
+                        Console.WriteLine($" ");
+                        Console.WriteLine("How many days will you like to spend on your trip?");
+                        int jamDays = int.Parse(Console.ReadLine());
+                        Console.WriteLine("How much spending money would you like to bring?");
+                        Console.Write("$ ");
+                        double jamMoney = double.Parse(Console.ReadLine());
+                        double jamPerDay = jamMoney / jamDays;
+                        Console.WriteLine($"{name}, if you are going to {country} for {jamDays} days with {jamMoney:c} for spending money. You can budget {jamPerDay:c} per day.");
+                        double jamExchange = 150.34;
+                        double jamDollar = jamPerDay * jamExchange;
+                        Console.WriteLine($"The recent exchange rate for the Jamaican Dollar is {jamExchange} Dollars per 1 USD. This does not include fees for exchange.");
+                        Console.WriteLine($" ");
+                        Console.WriteLine($" If you have ${jamPerDay}, then you will have {jamDollar} Pesos per day. ");
+                        Console.WriteLine($" ");
+
+                        break;
+                    default:
+                        Console.WriteLine("That's not one of your choices.");
+                        break;
+                }
+                Console.WriteLine("Would you like to make any changes, yes or no?");
+                string rerun = (Console.ReadLine()).ToLower();
+                keepGoing = false;
+                if (rerun == "yes" || rerun == "y")
+                {
+                    keepGoing = true;                   
+
+                }
+                else if (rerun == "no" || rerun =="n")
+                {
+                    keepGoing = false;
+
+                }
+
+                else
+                {
+
+                    Console.WriteLine("That's not one of your choices.");
+                    keepGoing = true;
+                    Console.WriteLine($" ");
+                }
+
+                
+
+            }
+            Console.WriteLine($"{name}, have a great trip! Dont forget to bring extra money for exchange fees.");
+
+            Console.WriteLine("Please press ENTER to exit.");
+            Console.ReadLine();
+
+
+
+        }
+    }
+}
